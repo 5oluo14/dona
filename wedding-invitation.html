@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation — Mohamed & Shereen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ───── FLOATING BUTTONS ───── -->
+  <button id="lang-btn" onclick="toggleLang()">EN / AR</button>
+  <button id="music-btn" title="Music" onclick="toggleMusic(this)">♪</button>
+
+  <!-- ══════════════════════════════
+       SECTION 1: CURTAINS
+  ══════════════════════════════ -->
+  <section id="stage" onclick="openCurtain()">
+    <div class="pelmet"></div>
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+
+    <div id="tap-prompt">
+      <span class="en">TAP TO OPEN</span>
+      <span class="it" style="display:none">اضغط عشان تفتح</span>
+      <span class="arrow">↓</span>
+    </div>
+
+    <div id="stage-content">
+      <p class="eyebrow en">YOU ARE CORDIALLY INVITED TO CELEBRATE THE WEDDING OF</p>
+      <p class="eyebrow it" style="display:none">يسعدنا دعوتكم لحضور حفل زفاف</p>
+      <div class="names">
+        Mohamed
+        <span class="ampersand">&amp;</span>
+        Shereen
+      </div>
+      <p class="welcome en">We would like to invite you to celebrate with us the most special day of our lives. It would
+        be an honour to have you present at this important moment.</p>
+      <p class="welcome it" style="display:none">يسعدنا دعوتكم لحضور حفل زفافنا، ونتمنى أن تشاركونا فرحتنا في هذا اليوم
+        المميز.</p>
+    </div>
+
+    <div id="scroll-cue">
+      <span class="en">SCROLL DOWN</span>
+      <span class="it" style="display:none">انزل للاسفل</span>
+      <span class="arr">↓</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 2: SCRATCH REVEAL
+  ══════════════════════════════ -->
+  <section id="reveal">
+    <h2 class="section-title fade-up en">Reveal</h2>
+    <h2 class="section-title fade-up it" style="display:none">اكتشف</h2>
+    <p class="section-sub fade-up en">SCRATCH TO DISCOVER THE DATE</p>
+    <p class="section-sub fade-up it" style="display:none">خربش عشان تعرف التاريخ</p>
+
+    <div class="coins-row fade-up">
+      <!-- Coin 1: Day -->
+      <div class="coin-wrap">
+        <div class="coin-label en">DAY</div>
+        <div class="coin-label it" style="display:none">يوم</div>
+        <div class="coin-container" id="coin-wrap-0">
+          <div class="coin-back"><span>27</span></div>
+          <canvas class="coin-canvas" id="coin0"></canvas>
+        </div>
+      </div>
+      <!-- Coin 2: Month -->
+      <div class="coin-wrap">
+        <div class="coin-label en">MONTH</div>
+        <div class="coin-label it" style="display:none">شهر</div>
+        <div class="coin-container" id="coin-wrap-1" style="transform:translateY(-16px)">
+          <div class="coin-back"><span>Mar</span></div>
+          <canvas class="coin-canvas" id="coin1"></canvas>
+        </div>
+      </div>
+      <!-- Coin 3: Year -->
+      <div class="coin-wrap">
+        <div class="coin-label en">YEAR</div>
+        <div class="coin-label it" style="display:none">سنة</div>
+        <div class="coin-container" id="coin-wrap-2">
+          <div class="coin-back"><span>2026</span></div>
+          <canvas class="coin-canvas" id="coin2"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <p class="scratch-hint fade-up en">✦ scratch gently ✦</p>
+    <p class="scratch-hint fade-up it" style="display:none">✦ خربش عشان تعرف التاريخ ✦</p>
+
+    <p id="reveal-msg">
+      <span class="en">We're getting married! 💍</span>
+      <span class="it" style="display:none">اخيراً هنتجوز 💍</span>
+    </p>
+    <a id="to-countdown" href="#countdown">
+      <span class="en">COUNTDOWN ↓</span>
+      <span class="it" style="display:none">عد تنازلي ↓</span>
+    </a>
+
+    <div id="confetti-container"></div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 3: COUNTDOWN
+  ══════════════════════════════ -->
+  <section id="countdown">
+    <h2 class="section-title fade-up en">Counting Down</h2>
+    <h2 class="section-title fade-up it" style="display:none">باقي من الزمن ...</h2>
+    <p class="section-sub fade-up en">UNTIL THE BIG DAY</p>
+    <p class="section-sub fade-up it" style="display:none">ع يوم فرحنا لولولولي</p>
+
+    <div class="timer-row fade-up">
+      <div class="timer-box">
+        <div class="timer-num" id="t-days">00</div>
+        <div class="timer-label en">DAYS</div>
+        <div class="timer-label it" style="display:none">يوم</div>
+      </div>
+      <div class="timer-box">
+        <div class="timer-num" id="t-hours">00</div>
+        <div class="timer-label en">HOURS</div>
+        <div class="timer-label it" style="display:none">ساعة</div>
+      </div>
+      <div class="timer-box">
+        <div class="timer-num" id="t-min">00</div>
+        <div class="timer-label en">MIN</div>
+        <div class="timer-label it" style="display:none">دقيقة</div>
+      </div>
+      <div class="timer-box">
+        <div class="timer-num" id="t-sec">00</div>
+        <div class="timer-label en">SEC</div>
+        <div class="timer-label it" style="display:none">ثانية</div>
+      </div>
+    </div>
+    <p id="countdown-sub" class="fade-up">
+      <span class="en">until the big day — 27 March 2026</span>
+      <span class="it" style="display:none">يوم فرحنا هيهيهيهي — 27 مارس 2026</span>
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 4: VENUE
+  ══════════════════════════════ -->
+  <section id="venue">
+    <p class="venue-eyebrow fade-up en">THE CELEBRATION WILL TAKE PLACE AT</p>
+    <p class="venue-eyebrow fade-up it" style="display:none">لافرح هيكون في</p>
+
+    <div id="venue-svg" class="fade-up">
+      <!-- SVG hand-drawn manor illustration -->
+      <svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg" stroke="#2C1810" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="10" y1="210" x2="450" y2="210" stroke-width="1.5" />
+        <line x1="160" y1="210" x2="300" y2="210" stroke-width="1" />
+        <line x1="170" y1="205" x2="290" y2="205" stroke-width="1" />
+        <line x1="180" y1="200" x2="280" y2="200" stroke-width="1" />
+        <rect x="130" y="80" width="200" height="120" stroke-width="1.4" />
+        <polygon points="115,80 230,30 345,80" stroke-width="1.4" />
+        <line x1="140" y1="80" x2="320" y2="80" stroke-width="0.8" />
+        <line x1="160" y1="68" x2="300" y2="68" stroke-width="0.7" stroke-dasharray="3,3" />
+        <circle cx="230" cy="52" r="9" stroke-width="1" />
+        <line x1="226" y1="48" x2="226" y2="56" stroke-width="0.7" />
+        <line x1="222" y1="52" x2="238" y2="52" stroke-width="0.7" />
+        <rect x="207" y="155" width="46" height="45" stroke-width="1.3" rx="23" />
+        <line x1="230" y1="155" x2="230" y2="200" stroke-width="0.7" />
+        <circle cx="239" cy="180" r="2" stroke-width="1" />
+        <rect x="145" y="100" width="38" height="38" stroke-width="1" rx="3" />
+        <line x1="164" y1="100" x2="164" y2="138" stroke-width="0.7" />
+        <line x1="145" y1="119" x2="183" y2="119" stroke-width="0.7" />
+        <path d="M145,100 Q164,88 183,100" stroke-width="0.8" />
+        <rect x="277" y="100" width="38" height="38" stroke-width="1" rx="3" />
+        <line x1="296" y1="100" x2="296" y2="138" stroke-width="0.7" />
+        <line x1="277" y1="119" x2="315" y2="119" stroke-width="0.7" />
+        <path d="M277,100 Q296,88 315,100" stroke-width="0.8" />
+        <line x1="160" y1="80" x2="160" y2="200" stroke-width="1.2" />
+        <line x1="185" y1="80" x2="185" y2="200" stroke-width="1.2" />
+        <line x1="210" y1="80" x2="210" y2="200" stroke-width="1.2" />
+        <line x1="250" y1="80" x2="250" y2="200" stroke-width="1.2" />
+        <line x1="275" y1="80" x2="275" y2="200" stroke-width="1.2" />
+        <line x1="300" y1="80" x2="300" y2="200" stroke-width="1.2" />
+        <line x1="154" y1="83" x2="166" y2="83" stroke-width="1.4" />
+        <line x1="179" y1="83" x2="191" y2="83" stroke-width="1.4" />
+        <line x1="204" y1="83" x2="216" y2="83" stroke-width="1.4" />
+        <line x1="244" y1="83" x2="256" y2="83" stroke-width="1.4" />
+        <line x1="269" y1="83" x2="281" y2="83" stroke-width="1.4" />
+        <line x1="294" y1="83" x2="306" y2="83" stroke-width="1.4" />
+        <rect x="30" y="110" width="100" height="100" stroke-width="1.3" />
+        <rect x="45" y="125" width="28" height="28" stroke-width="1" rx="2" />
+        <line x1="59" y1="125" x2="59" y2="153" stroke-width="0.7" />
+        <line x1="45" y1="139" x2="73" y2="139" stroke-width="0.7" />
+        <rect x="82" y="125" width="28" height="28" stroke-width="1" rx="2" />
+        <line x1="96" y1="125" x2="96" y2="153" stroke-width="0.7" />
+        <line x1="82" y1="139" x2="110" y2="139" stroke-width="0.7" />
+        <line x1="30" y1="110" x2="130" y2="110" stroke-width="1" />
+        <path d="M22,110 Q80,88 138,110" stroke-width="1.1" />
+        <rect x="330" y="110" width="100" height="100" stroke-width="1.3" />
+        <rect x="345" y="125" width="28" height="28" stroke-width="1" rx="2" />
+        <line x1="359" y1="125" x2="359" y2="153" stroke-width="0.7" />
+        <line x1="345" y1="139" x2="373" y2="139" stroke-width="0.7" />
+        <rect x="382" y="125" width="28" height="28" stroke-width="1" rx="2" />
+        <line x1="396" y1="125" x2="396" y2="153" stroke-width="0.7" />
+        <line x1="382" y1="139" x2="410" y2="139" stroke-width="0.7" />
+        <line x1="330" y1="110" x2="430" y2="110" stroke-width="1" />
+        <path d="M322,110 Q380,88 438,110" stroke-width="1.1" />
+        <line x1="230" y1="30" x2="230" y2="18" stroke-width="1" />
+        <circle cx="230" cy="15" r="4" stroke-width="1" />
+        <path d="M35,210 Q50,192 65,210" stroke-width="1" />
+        <path d="M65,210 Q80,190 95,210" stroke-width="1" />
+        <path d="M365,210 Q380,192 395,210" stroke-width="1" />
+        <path d="M395,210 Q410,190 425,210" stroke-width="1" />
+        <line x1="120" y1="150" x2="120" y2="210" stroke-width="1.2" />
+        <circle cx="120" cy="146" r="5" stroke-width="1" />
+        <line x1="340" y1="150" x2="340" y2="210" stroke-width="1.2" />
+        <circle cx="340" cy="146" r="5" stroke-width="1" />
+      </svg>
+    </div>
+
+    <h3 class="venue-name fade-up">Kayan's Haven Venue</h3>
+    <p class="venue-address fade-up">
+      Orabi - Obour Road &nbsp;·&nbsp; 06:00 PM<br>
+      Cairo, Egypt
+    </p>
+
+    <div class="ornament fade-up">✦</div>
+
+    <a class="maps-btn fade-up" href="https://maps.app.goo.gl/nJy4tfbcgj38YBpu8?g_st=ic" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+      </svg>
+      <span class="en">OPEN IN MAPS</span>
+      <span class="it" style="display:none">افتح اللوكيشن ف جوجل ماب</span>
+    </a>
+  </section>
+
+  <!-- JS loaded last so DOM is ready -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
