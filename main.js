@@ -26,7 +26,10 @@ function openCurtain() {
     if (curtainOpened) return;
     curtainOpened = true;
     document.getElementById('stage').classList.add('open');
-    new Audio("pablo.mp3").play();
+    const audio = new Audio("dona.mp3");
+    audio.currentTime = 25;
+    audio.play();
+    document.getElementById('tap-prompt').style.display = 'none';
 }
 
 /* ═══════════════════════
