@@ -814,3 +814,8 @@ body {
         opacity: 0;
     }
 }
+
+.it {
+    font-family: "Beiruti", sans-serif;
+        direction: rtl;
+}
