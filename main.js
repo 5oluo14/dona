@@ -35,6 +35,7 @@ function openCurtain() {
     if (curtainOpened) return;
     curtainOpened = true;
     document.getElementById('stage').classList.add('open');
+    audio.currentTime = 25;
     audio.play();
     musicOn = true;
     const btn = document.getElementById('music-btn');
@@ -289,23 +290,10 @@ function launchConfetti() {
 
     const colors = [
         "#5c2018",
-        "#D4AF37",
-        "#F5E6A3",
-        "#ffffff",
-        "#ff4d6d",
-        "#ffd166",
-        "#8B1A1A",
-        "#d1bc1dff",
-        "#D4AF37",
-        "#0b58aaff",
-        "#1eb43aff",
-        "#13bcbfff",
-        "#ffd166",
-        "#b47619ff",
-        "#C0392B"
+        "#791d1dff",
     ];
 
-    const confettiCount = 300;
+    const confettiCount = 500;
 
     for (let i = 0; i < confettiCount; i++) {
 
