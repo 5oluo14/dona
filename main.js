@@ -285,7 +285,6 @@ window.addEventListener('resize', () => {
 
 
 function launchConfetti() {
-
     const container = document.getElementById("confetti-container");
 
     const colors = [
@@ -293,7 +292,7 @@ function launchConfetti() {
         "#791d1dff",
     ];
 
-    const confettiCount = 500;
+    const confettiCount = 300;
 
     for (let i = 0; i < confettiCount; i++) {
 
