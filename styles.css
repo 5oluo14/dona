@@ -459,7 +459,7 @@ body .it {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg);
+    background: var(--gold2);
     overflow: hidden;
 }
 
@@ -468,7 +468,7 @@ body .it {
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.6rem, 5vw, 2.6rem);
-    color: var(--text);
+    color: var(--bg);
     text-align: center;
     line-height: 1;
 }
