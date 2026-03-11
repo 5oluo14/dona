@@ -289,7 +289,20 @@ function launchConfetti() {
 
     const colors = [
         "#5c2018",
-        "#791d1dff",
+        "#D4AF37",
+        "#F5E6A3",
+        "#ffffff",
+        "#ff4d6d",
+        "#ffd166",
+        "#8B1A1A",
+        "#d1bc1dff",
+        "#D4AF37",
+        "#0b58aaff",
+        "#1eb43aff",
+        "#13bcbfff",
+        "#ffd166",
+        "#b47619ff",
+        "#C0392B"
     ];
 
     const confettiCount = 300;
