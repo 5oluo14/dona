@@ -9,11 +9,20 @@ function toggleLang() {
 }
 
 /* ═══════════════════════
-   MUSIC TOGGLE (UI only)
+   MUSIC TOGGLE 
 ═══════════════════════ */
+const audio = new Audio("dona.mp3");
+audio.loop = true;
+audio.currentTime = 25;
+
 let musicOn = false;
 function toggleMusic(btn) {
     musicOn = !musicOn;
+    if (musicOn) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
     btn.textContent = musicOn ? '♬' : '♪';
     btn.style.background = musicOn ? 'rgba(139,26,26,1)' : 'rgba(139,26,26,0.85)';
 }
@@ -26,9 +35,11 @@ function openCurtain() {
     if (curtainOpened) return;
     curtainOpened = true;
     document.getElementById('stage').classList.add('open');
-    const audio = new Audio("dona.mp3");
-    audio.currentTime = 25;
     audio.play();
+    musicOn = true;
+    const btn = document.getElementById('music-btn');
+    btn.textContent = '♬';
+    btn.style.background = 'rgba(139,26,26,1)';
     document.getElementById('tap-prompt').style.display = 'none';
 }
 
@@ -278,20 +289,8 @@ function launchConfetti() {
     const container = document.getElementById("confetti-container");
 
     const colors = [
-        "#D4AF37",
-        "#F5E6A3",
-        "#ffffff",
-        "#ff4d6d",
-        "#ffd166",
-        "#8B1A1A",
-        "#d1bc1dff",
-        "#D4AF37",
-        "#0b58aaff",
-        "#1eb43aff",
-        "#13bcbfff",
-        "#ffd166",
-        "#b47619ff",
-        "#C0392B"
+        "#5c2018",
+        "#791d1dff",
     ];
 
     const confettiCount = 500;
@@ -326,4 +325,5 @@ function launchConfetti() {
             confetti.remove();
         }, 7000);
     }
+
 }

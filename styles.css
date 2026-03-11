@@ -9,11 +9,11 @@
 :root {
     --burgundy: #8B1A1A;
     --crimson: #C0392B;
-    --bg: #FAFAF8;
-    --gold1: #D4AF37;
-    --gold2: #F5E6A3;
-    --gold3: #C9A84C;
-    --text: #2C1810;
+    --bg: #faf8f5;
+    --gold1: #734848;
+    --gold2: #5c2018;
+    --gold3: #e3e3e3;
+    --text: #5c2018;
     --blush: #E8C4B8;
     --silver: #B0B0B0;
 }
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    background: var(--bg);
+    /* background: var(--bg); */
     color: var(--text);
     font-family: 'Cormorant Garamond', serif;
     overflow-x: hidden;
@@ -49,7 +49,7 @@ body {
     right: 70px;
     z-index: 9999;
     background: rgba(139, 26, 26, 0.85);
-    color: #F5E6A3;
+    color: var(--gold3);
     border: 1px solid var(--gold1);
     border-radius: 20px;
     padding: 6px 14px;
@@ -75,7 +75,7 @@ body {
     border-radius: 50%;
     background: rgba(139, 26, 26, 0.85);
     border: 1px solid var(--gold1);
-    color: #F5E6A3;
+    color: var(--bg);
     font-size: 18px;
     cursor: pointer;
     display: flex;
@@ -97,7 +97,6 @@ body {
     width: 100%;
     height: 100dvh;
     overflow: hidden;
-    background: #0a0000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +112,7 @@ body {
     transform: translateX(-50%);
     width: 80%;
     height: 120px;
-    background: radial-gradient(ellipse at center bottom, rgba(212, 175, 55, 0.35) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center bottom, #e3e3e3 0%, transparent 30%);
     pointer-events: none;
     z-index: 3;
 }
@@ -227,7 +226,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
-    color: #F5E6A3;
+    color: var(--gold3);
     font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: .25em;
@@ -285,7 +284,7 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 10px;
     letter-spacing: .3em;
-    color: rgba(245, 230, 163, 0.7);
+    color: var(--gold2);
     margin-bottom: 20px;
     opacity: 0;
     transition: opacity 1s ease 1.6s;
@@ -300,7 +299,7 @@ body {
     font-style: italic;
     font-size: clamp(2.8rem, 9vw, 5.2rem);
     font-weight: 300;
-    color: #F5E6A3;
+    color: var(--gold2);
     line-height: 1.1;
     opacity: 0;
     transform: translateY(20px);
@@ -315,14 +314,14 @@ body {
 #stage-content .ampersand {
     display: block;
     font-size: clamp(2rem, 6vw, 3.6rem);
-    color: var(--gold1);
+    color: var(--gold2);
     margin: .05em 0;
 }
 
 #stage-content .welcome {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(.8rem, 2.5vw, 1rem);
-    color: rgba(245, 230, 163, 0.75);
+    color: var(--gold2);
     line-height: 1.7;
     margin-top: 22px;
     max-width: 420px;
@@ -342,7 +341,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
-    color: #F5E6A3;
+    color: var(--gold2);
     font-family: 'Cinzel', serif;
     font-size: 10px;
     letter-spacing: .25em;
@@ -401,7 +400,7 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 10px;
     letter-spacing: .28em;
-    color: var(--crimson);
+    color: var(--text);
     margin-bottom: 50px;
 }
 
@@ -446,7 +445,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0a0000;
+    background: var(--bg);
     overflow: hidden;
 }
 
@@ -455,7 +454,7 @@ body {
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.6rem, 5vw, 2.6rem);
-    color: #F5E6A3;
+    color: var(--text);
     text-align: center;
     line-height: 1;
 }
@@ -613,14 +612,14 @@ body {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     font-size: clamp(2.4rem, 8vw, 4.2rem);
-    color: #F5E6A3;
+    color: var(--gold2);
     line-height: 1;
-    border: 1px solid rgba(212, 175, 55, 0.35);
+    border: 1px solid var(--gold2);
     border-radius: 8px;
     padding: 10px 16px;
     min-width: 100%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg);
     position: relative;
 }
 
@@ -631,7 +630,7 @@ body {
     left: 10%;
     right: 10%;
     height: 1px;
-    background: var(--gold1);
+    background: var(--gold2);
     opacity: .3;
 }
 
@@ -639,7 +638,7 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 8px;
     letter-spacing: .22em;
-    color: rgba(212, 175, 55, 0.55);
+    color: var(--gold2);
     margin-top: 10px;
 }
 
@@ -647,7 +646,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: clamp(1rem, 3vw, 1.3rem);
-    color: rgba(245, 230, 163, 0.55);
+    color: var(--gold2);
     margin-top: 8px;
     letter-spacing: .05em;
 }
@@ -657,7 +656,7 @@ body {
 ══════════════════════════════ */
 #venue {
     min-height: 100dvh;
-    background: var(--bg);
+    /* background: var(--bg); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -672,7 +671,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 50% 100%, rgba(139, 26, 26, 0.07) 0%, transparent 60%);
+    /* background: radial-gradient(ellipse at 50% 100%, rgba(139, 26, 26, 0.07) 0%, transparent 60%); */
     pointer-events: none;
 }
 
@@ -682,6 +681,7 @@ body {
     letter-spacing: .32em;
     color: var(--crimson);
     margin-bottom: 48px;
+    margin-top: 32px;
 }
 
 #venue-svg {
@@ -689,6 +689,7 @@ body {
     width: 100%;
     margin: 0 auto 36px;
     opacity: .85;
+
 }
 
 #venue-svg svg {
@@ -813,4 +814,136 @@ body {
         transform: translateY(110vh) rotate(720deg);
         opacity: 0;
     }
+}
+
+/* ══════════════════════════════
+   SECTION 5 — THANK YOU
+══════════════════════════════ */
+#thankyou {
+    min-height: 60dvh;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 80px;
+}
+
+.thankyou-card {
+    background: var(--text);
+    border-radius: 18px;
+    padding: 10px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 12px 50px rgba(92, 10, 10, 0.35);
+    position: relative;
+}
+
+.thankyou-inner {
+    background: #FAFAF8;
+    border-radius: 10px;
+    padding: 50px 40px 46px;
+    text-align: center;
+    /* Decorative scalloped border using SVG mask / outline */
+    outline: 3px solid transparent;
+    position: relative;
+}
+
+/* Scalloped inner edge via CSS radial-gradient mask */
+.thankyou-inner::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 10px;
+    background:
+        radial-gradient(circle at 50% 0%, #FAFAF8 8px, transparent 8px),
+        radial-gradient(circle at 0% 50%, #FAFAF8 8px, transparent 8px),
+        radial-gradient(circle at 100% 50%, #FAFAF8 8px, transparent 8px),
+        radial-gradient(circle at 50% 100%, #FAFAF8 8px, transparent 8px);
+    pointer-events: none;
+}
+
+/* Zigzag/scallop top edge */
+.thankyou-inner::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: radial-gradient(ellipse 24px 24px at 7px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 21px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 35px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 49px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 63px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 77px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 91px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 105px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 124px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 133px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 147px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 161px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 175px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 189px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 203px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 217px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 231px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 245px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 259px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 273px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 287px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 301px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 315px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 329px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 343px 0%, #FAFAF8 50%, transparent 51%),
+        radial-gradient(ellipse 24px 24px at 357px 0%, #FAFAF8 50%, transparent 51%);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.thankyou-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 7vw, 3rem);
+    color: var(--burgundy);
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.thankyou-msg {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    opacity: 0.8;
+}
+
+.thankyou-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--burgundy);
+    margin-top: 4px;
+}
+
+#site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#site-footer a {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#site-footer a:hover,
+#site-footer a:focus {
+    text-decoration: none;
 }
