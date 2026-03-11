@@ -11,6 +11,9 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -35,21 +38,26 @@
 
     <div id="stage-content">
       <p class="eyebrow en">YOU ARE CORDIALLY INVITED TO CELEBRATE THE WEDDING OF</p>
-      <p class="eyebrow it" style="display:none">يسعدنا دعوتكم لحضور حفل زفاف</p>
-      <div class="names">
+      <p class="eyebrow it" style="display:none;font-size: 20px;">يسعدنا دعوتكم لحضور حفل زفاف</p>
+      <div class="names en">
         Mohamed
         <span class="ampersand">&amp;</span>
         Shereen
       </div>
+        <div class="names it" style="display:none">
+          محمد
+          <span class="ampersand">&amp;</span>
+          شريين
+        </div>
       <p class="welcome en">We would like to invite you to celebrate with us the most special day of our lives. It would
         be an honour to have you present at this important moment.</p>
-      <p class="welcome it" style="display:none">يسعدنا دعوتكم لحضور حفل زفافنا، ونتمنى أن تشاركونا فرحتنا في هذا اليوم
-        المميز.</p>
+      <p class="welcome it" style="display:none;font-size: 24px;">يسعدنا دعوتكم لحضور حفل زفافنا، ونتمنى أن تشاركونا فرحتنا في اليوم
+        المميز ده.</p>
     </div>
 
     <div id="scroll-cue">
       <span class="en">SCROLL DOWN</span>
-      <span class="it" style="display:none">انزل للاسفل</span>
+      <span class="it" style="display:none">انزل لتحت</span>
       <span class="arr">↓</span>
     </div>
   </section>
@@ -59,15 +67,15 @@
   ══════════════════════════════ -->
   <section id="reveal">
     <h2 class="section-title fade-up en">Reveal</h2>
-    <h2 class="section-title fade-up it" style="display:none">اكتشف</h2>
+    <h2 class="section-title fade-up it" style="display:none">عايز تعرف تاريخ الفرح ؟</h2>
     <p class="section-sub fade-up en">SCRATCH TO DISCOVER THE DATE</p>
-    <p class="section-sub fade-up it" style="display:none">خربش عشان تعرف التاريخ</p>
+    <p class="section-sub fade-up it" style="display:none;font-size: 14px;">خربش عشان تعرف التاريخ</p>
 
     <div class="coins-row fade-up">
       <!-- Coin 1: Day -->
       <div class="coin-wrap">
         <div class="coin-label en">DAY</div>
-        <div class="coin-label it" style="display:none">يوم</div>
+        <div class="coin-label it" style="display:none ;font-size: 12px;">يوم</div>
         <div class="coin-container" id="coin-wrap-0">
           <div class="coin-back"><span>27</span></div>
           <canvas class="coin-canvas" id="coin0"></canvas>
@@ -76,7 +84,7 @@
       <!-- Coin 2: Month -->
       <div class="coin-wrap">
         <div class="coin-label en">MONTH</div>
-        <div class="coin-label it" style="display:none">شهر</div>
+        <div class="coin-label it" style="display:none;font-size: 12px;">شهر</div>
         <div class="coin-container" id="coin-wrap-1" style="transform:translateY(-16px)">
           <div class="coin-back"><span>Mar</span></div>
           <canvas class="coin-canvas" id="coin1"></canvas>
@@ -85,7 +93,7 @@
       <!-- Coin 3: Year -->
       <div class="coin-wrap">
         <div class="coin-label en">YEAR</div>
-        <div class="coin-label it" style="display:none">سنة</div>
+        <div class="coin-label it" style="display:none;font-size: 14px;">سنة</div>
         <div class="coin-container" id="coin-wrap-2">
           <div class="coin-back"><span>2026</span></div>
           <canvas class="coin-canvas" id="coin2"></canvas>
@@ -98,12 +106,8 @@
 
     <p id="reveal-msg">
       <span class="en">We're getting married! 💍</span>
-      <span class="it" style="display:none">اخيراً هنتجوز 💍</span>
+      <span class="it" style="display:none">اخيراً هنتجوز!  💍</span>
     </p>
-    <a id="to-countdown" href="#countdown">
-      <span class="en">COUNTDOWN ↓</span>
-      <span class="it" style="display:none">عد تنازلي ↓</span>
-    </a>
 
     <div id="confetti-container"></div>
   </section>
@@ -114,30 +118,30 @@
   ══════════════════════════════ -->
   <section id="venue">
     <h2 class="section-title fade-up en">Counting Down</h2>
-    <h2 class="section-title fade-up it" style="display:none">باقي من الزمن ...</h2>
+    <h2 class="section-title fade-up it" style="display:none">باقي من الزمن ..</h2>
     <p class="section-sub fade-up en">UNTIL THE BIG DAY</p>
-    <p class="section-sub fade-up it" style="display:none">ع يوم فرحنا لولولولي</p>
+    <p class="section-sub fade-up it" style="display:none ;font-size: 14px;">ع يوم فرحنا</p>
 
     <div class="timer-row fade-up">
       <div class="timer-box">
         <div class="timer-num" id="t-days">00</div>
         <div class="timer-label en">DAYS</div>
-        <div class="timer-label it" style="display:none">يوم</div>
+        <div class="timer-label it" style="display:none ;font-size: 14px;">يوم</div>
       </div>
       <div class="timer-box">
         <div class="timer-num" id="t-hours">00</div>
         <div class="timer-label en">HOURS</div>
-        <div class="timer-label it" style="display:none">ساعة</div>
+        <div class="timer-label it" style="display:none ;font-size: 14px;">ساعة</div>
       </div>
       <div class="timer-box">
         <div class="timer-num" id="t-min">00</div>
         <div class="timer-label en">MIN</div>
-        <div class="timer-label it" style="display:none">دقيقة</div>
+        <div class="timer-label it" style="display:none ;font-size: 14px;">دقيقة</div>
       </div>
       <div class="timer-box">
         <div class="timer-num" id="t-sec">00</div>
         <div class="timer-label en">SEC</div>
-        <div class="timer-label it" style="display:none">ثانية</div>
+        <div class="timer-label it" style="display:none ;font-size: 14px;">ثانية</div>
       </div>
     </div>
     <p id="countdown-sub" class="fade-up">
@@ -145,16 +149,20 @@
       <span class="it" style="display:none">يوم فرحنا هيهيهيهي — 27 مارس 2026</span>
     </p>
     <p class="venue-eyebrow fade-up en">THE CELEBRATION WILL TAKE PLACE AT</p>
-    <p class="venue-eyebrow fade-up it" style="display:none">لافرح هيكون في</p>
+    <p class="venue-eyebrow fade-up it" style="display:none ;font-size: 18px;">الفرح هيكون في</p>
 
     <div id="venue-svg" class="fade-up">
       <img src="kayan.png" alt="" style="width: 100%;">
     </div>
 
     <h3 class="venue-name fade-up">Kayan's Haven Venue</h3>
-    <p class="venue-address fade-up">
+    <p class="venue-address en fade-up">
       Orabi - Obour Road &nbsp;·&nbsp; 06:00 PM<br>
       Cairo, Egypt
+    </p>
+    <p class="venue-address it fade-up" style="display:none ;font-size: 14px;" >
+      عرابي - طريق العبور &nbsp;·&nbsp; 06:00 مساءاً<br>
+      القاهرة، مصر
     </p>
 
     <div class="ornament fade-up">✦</div>
@@ -179,8 +187,8 @@
         <h2 class="thankyou-title it" style="display:none">شكراً</h2>
         <p class="thankyou-msg en">For joining us on this special day.<br>Your presence is the best gift we could
           receive.</p>
-        <p class="thankyou-msg it" style="display:none">على مشاركتنا في هذا اليوم المميز.<br>حضوركم هو أجمل هدية.</p>
-        <p class="thankyou-names">Mohamed &amp; Shereen</p>
+        <p class="thankyou-msg it" style="display:none">على مشاركتنا في اليوم المميز ده.<br>حضوركم هو أجمل هدية.</p>
+        <p class="thankyou-names en">Mohamed &amp; Shereen</p><p class="thankyou-names it" style="display:none">محمد &amp; شريين</p>
       </div>
     </div>
   </section>
