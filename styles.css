@@ -236,13 +236,13 @@ body .it {
 /* Tap prompt */
 #tap-prompt {
     position: absolute;
-    bottom: 80px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 15;
     color: var(--gold3);
     /* font-family: 'Cinzel', serif; */
-    font-size: 11px;
+    font-size: 18px;
     text-align: center;
     animation: pulse-fade 2s ease-in-out infinite;
     transition: opacity .6s;
